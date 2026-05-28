@@ -1,0 +1,14 @@
+item,value
+Female sample size,6940
+Female yes count,2580
+Female proportion,0.37175792507204614
+Male sample size,6893
+Male yes count,1567
+Male proportion,0.22733207601914987
+Estimated difference: Female - Male,0.14442584905289627
+95% CI lower,0.12935373838769065
+95% CI upper,0.15949795971810188
+Z-statistic,18.537353945089173
+P-value,0.0
+Alpha,0.05
+Decision,Reject H0

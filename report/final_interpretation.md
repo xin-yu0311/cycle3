@@ -1,0 +1,62 @@
+# Final Interpretation
+
+Project Cycle 3 Final Summary
+=============================
+
+Research Question
+-----------------
+Is the proportion of students who felt sad or hopeless different between female and male students?
+
+Variables
+---------
+Group variable: WhatIsYourSex
+- 1 = Female
+- 2 = Male
+
+Response variable: SadOrHopeless
+- Original code 1 = Yes
+- Original code 2 = No
+
+Recoded response variable: SadOrHopeless_binary
+- 1 = Yes / success
+- 0 = No / failure
+
+Method
+------
+Because the response variable is binary and the project compares two independent groups, a two-proportion z-test was used.
+
+Hypotheses
+----------
+H0: p_Female - p_Male = 0
+H1: p_Female - p_Male != 0
+Alpha = 0.05
+
+Descriptive Results
+-------------------
+Female students: 2580 out of 6940 reported sad or hopeless feelings.
+Female sample proportion: 0.3718 (37.18%)
+
+Male students: 1567 out of 6893 reported sad or hopeless feelings.
+Male sample proportion: 0.2273 (22.73%)
+
+Estimated Difference
+--------------------
+p_Female - p_Male = 0.1444
+This means the female proportion was about 14.44 percentage points higher than the male proportion.
+
+Inferential Result
+------------------
+95% confidence interval for the difference: (0.1294, 0.1595)
+In percentage points: (12.94%, 15.95%)
+
+Test statistic (z): 18.5374
+P-value: 1.032e-76
+Decision at alpha = 0.05: Reject H0
+
+Interpretation
+--------------
+At the 0.05 significance level, there is sufficient statistical evidence that the proportion of students who reported feeling sad or hopeless differs between female and male students in the YRBS 2007 dataset. Female students reported sad or hopeless feelings at a significantly higher proportion than male students.
+
+Limitation
+----------
+This analysis is based on observational survey data. Therefore, the result shows an association between sex and sad or hopeless feelings, but it does not prove that sex causes differences in sad or hopeless feelings.
