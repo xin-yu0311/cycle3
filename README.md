@@ -1,12 +1,12 @@
 # Project Cycle 3 - Two-Sample Inference using YRBS 2007
 
 ## Group Information
-- Group number: Group 15 (edit if your official group number is different)
+- Group number: Group 19 
 - Member 1: Liang Chan-Yu / 梁展育, Student ID: 112310316
 - Member 2: 王心妤 113370209
 
 ## Project Repository
-[Paste your GitHub repository link here]
+https://github.com/xin-yu0311/cycle3
 
 ## Presentation Video
 https://drive.google.com/file/d/11wPaeQKP7zFqHT00fsF_VaoCeLvGrr_E/view?usp=sharing
