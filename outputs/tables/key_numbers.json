@@ -1,0 +1,19 @@
+{
+  "main_n": 13833,
+  "extension_n": 12601,
+  "female_n": 6940,
+  "male_n": 6893,
+  "female_percent": 37.2,
+  "male_percent": 22.7,
+  "difference_percentage_points": 14.4,
+  "ci_low_percentage_points": 12.9,
+  "ci_high_percentage_points": 15.9,
+  "z_statistic": 18.54,
+  "p_value": 0.0,
+  "odds_ratio": 2.01,
+  "odds_ratio_ci_low": 1.87,
+  "odds_ratio_ci_high": 2.17,
+  "mantel_haenszel_common_or": 2.12,
+  "logistic_female_adjusted_or": 2.13,
+  "logistic_alcohol_adjusted_or": 1.9
+}

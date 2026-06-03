@@ -1,14 +1,2 @@
-item,value
-Female sample size,6940
-Female yes count,2580
-Female proportion,0.37175792507204614
-Male sample size,6893
-Male yes count,1567
-Male proportion,0.22733207601914987
-Estimated difference: Female - Male,0.14442584905289627
-95% CI lower,0.12935373838769065
-95% CI upper,0.15949795971810188
-Z-statistic,18.537353945089173
-P-value,0.0
-Alpha,0.05
-Decision,Reject H0
+comparison,female_n,male_n,female_sad_yes,male_sad_yes,female_proportion,male_proportion,difference_in_proportions,ci_95_low,ci_95_high,z_statistic,p_value,risk_difference,relative_risk,odds_ratio,odds_ratio_ci_95_low,odds_ratio_ci_95_high,alpha,decision
+Female - Male,6940,6893,2580,1567,0.37175792507204614,0.22733207601914987,0.14442584905289627,0.12935373838769065,0.15949795971810188,18.537353945089173,0.0,0.14442584905289627,1.635307835048892,2.0112468750548875,1.8669484509347412,2.166698277283847,0.05,Reject H0
