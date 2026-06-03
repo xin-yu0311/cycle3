@@ -1,60 +1,7 @@
-Project Cycle 3 Final Summary
-=============================
+Research question: Is the proportion of students who felt sad or hopeless different between female and male students?
 
-Research Question
------------------
-Is the proportion of students who felt sad or hopeless different between female and male students?
+Female students had a sad/hopeless proportion of 0.372 (37.2%), while male students had a proportion of 0.227 (22.7%). The estimated difference was 0.144, or 14.4 percentage points, with a 95% confidence interval from 12.9 to 15.9 percentage points. The two-proportion z-test gave z = 18.54 and p = 0.000e+00. At alpha = 0.05, we reject the null hypothesis.
 
-Variables
----------
-Group variable: WhatIsYourSex
-- 1 = Female
-- 2 = Male
+In context, female students in this dataset reported sad or hopeless feelings at a higher proportion than male students. The estimated odds ratio was 2.01. In the supplementary logistic regression that adjusted for current alcohol use, the adjusted odds ratio for female versus male students remained above 1, meaning the female-male difference was still visible after accounting for alcohol use.
 
-Response variable: SadOrHopeless
-- Original code 1 = Yes
-- Original code 2 = No
-
-Recoded response variable: SadOrHopeless_binary
-- 1 = Yes / success
-- 0 = No / failure
-
-Method
-------
-Because the response variable is binary and the project compares two independent groups, a two-proportion z-test was used.
-
-Hypotheses
-----------
-H0: p_Female - p_Male = 0
-H1: p_Female - p_Male != 0
-Alpha = 0.05
-
-Descriptive Results
--------------------
-Female students: 2580 out of 6940 reported sad or hopeless feelings.
-Female sample proportion: 0.3718 (37.18%)
-
-Male students: 1567 out of 6893 reported sad or hopeless feelings.
-Male sample proportion: 0.2273 (22.73%)
-
-Estimated Difference
---------------------
-p_Female - p_Male = 0.1444
-This means the female proportion was about 14.44 percentage points higher than the male proportion.
-
-Inferential Result
-------------------
-95% confidence interval for the difference: (0.1294, 0.1595)
-In percentage points: (12.94%, 15.95%)
-
-Test statistic (z): 18.5374
-P-value: 1.032e-76
-Decision at alpha = 0.05: Reject H0
-
-Interpretation
---------------
-At the 0.05 significance level, there is sufficient statistical evidence that the proportion of students who reported feeling sad or hopeless differs between female and male students in the YRBS 2007 dataset. Female students reported sad or hopeless feelings at a significantly higher proportion than male students.
-
-Limitation
-----------
-This analysis is based on observational survey data. Therefore, the result shows an association between sex and sad or hopeless feelings, but it does not prove that sex causes differences in sad or hopeless feelings.
+Because this is observational survey data, the result should be interpreted as an association, not causation. The analysis does not prove that sex causes sad or hopeless feelings, and self-reported survey responses may contain reporting or recall bias.

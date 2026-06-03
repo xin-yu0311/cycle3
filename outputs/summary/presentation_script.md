@@ -1,23 +1,13 @@
-# Presentation Video Script
+# Presentation Script for Project Cycle 3
 
-## Student A: Research Question, Variables, and Method
+## Student A - about 1 minute
 
-Hello, my name is Wang Xinyu, student ID ________.
+Hello, my name is [Name], student ID [ID]. Our Project Cycle 3 research question is: is the proportion of students who felt sad or hopeless different between female and male students? This is an approved two-sample inference question, so we kept female versus male students as the main comparison. The group variable is `WhatIsYourSex`, and the response variable is `SadOrHopeless`, which was recoded as 1 for yes and 0 for no. The raw data were not modified; all recoding was saved only in the processed dataset and documented in the references folder.
 
-Our research question is: Is the proportion of students who felt sad or hopeless different between female and male students?
+Because the response variable is binary and we are comparing two groups, our core method is a two-proportion z-test with a 95% confidence interval for the difference in proportions. To avoid making the project only a basic test result, we also report effect-size measures such as risk difference, relative risk, and odds ratio. Then we added current alcohol use as a supplementary extension to provide more context.
 
-The group variable is `WhatIsYourSex`, which defines two groups: female students and male students. The response variable is `SadOrHopeless`. This variable was recoded into a binary variable called `SadOrHopeless_binary`, where 1 means the student reported feeling sad or hopeless, and 0 means the student did not report feeling sad or hopeless.
+## Student B - about 1 minute
 
-Because the response variable is binary and we are comparing two independent groups, we used a two-proportion z-test. Our null hypothesis is that the female and male proportions are equal. Our alternative hypothesis is that the proportions are different. We used a significance level of 0.05.
+Hello, my name is [Name], student ID [ID]. Our main complete-case sample included 13,833 students. Female students reported sad or hopeless feelings at 37.2%, while male students reported 22.7%. The difference was 14.4 percentage points, with a 95% confidence interval from 12.9 to 15.9 percentage points. Since the p-value is smaller than 0.05, we reject the null hypothesis and conclude that the proportions are different.
 
-## Student B: Results, Interpretation, Conclusion, and Limitation
-
-Hello, my name is Liang Zhanyu, student ID ________.
-
-The key result shows that female students had a higher proportion of reporting sad or hopeless feelings than male students. The female sample proportion was 37.18%, while the male sample proportion was 22.73%.
-
-The estimated difference was 14.44 percentage points, meaning the female proportion was about 14.44 percentage points higher than the male proportion. The 95% confidence interval for the difference was from 12.94% to 15.95%, and the entire interval is above zero.
-
-The two-proportion z-test gave a p-value less than 0.001, so we rejected the null hypothesis at the 0.05 significance level. Therefore, we conclude that the proportion of students who felt sad or hopeless was significantly different between female and male students in this dataset.
-
-However, this result should not be interpreted as a causal relationship. The YRBS data are observational survey data, so we can only conclude that there is an association between sex and sad or hopeless feelings in this sample.
+The extended analysis with current alcohol use included 12,601 students. In the stratified chart, the female-male difference appears within both alcohol-use groups. In the logistic regression, the adjusted odds ratio for female versus male students is about 2.13, and the adjusted odds ratio for current alcohol use is about 1.90. This suggests that both sex and current alcohol use are associated with sad or hopeless feelings. However, because this is observational survey data, we can only conclude association, not causation.
