@@ -3,13 +3,13 @@
 ## Group Information
 - Group number: Group 15 (edit if your official group number is different)
 - Member 1: Liang Chan-Yu / 梁展育, Student ID: 112310316
-- Member 2: [Please fill in full name and student ID]
+- Member 2: 王心妤 113370209
 
 ## Project Repository
 [Paste your GitHub repository link here]
 
 ## Presentation Video
-[Paste your Google Drive, OneDrive, or GitHub video link here]
+https://drive.google.com/file/d/11wPaeQKP7zFqHT00fsF_VaoCeLvGrr_E/view?usp=sharing
 
 ## Selected Approved Research Question
 **Question 3: Gender and Sad or Hopeless Feeling**
