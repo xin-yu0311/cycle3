@@ -1,74 +1,38 @@
 # Recoding Rules
 
-## Dataset
-- **Dataset Name:** YRBS_2007.csv
+This project follows the Cycle 3 recoding rules. Raw data are kept unchanged in `data/raw/YRBS_2007.csv`. Recoded variables are saved only in `data/processed/yrbs_cycle3_cleaned_recoded.csv`.
 
-This file documents the cleaning and recoding rules used in Project Cycle 3.
+## Main approved question
+Question 3: Gender and Sad or Hopeless Feeling.
 
----
+## Sex
+`WhatIsYourSex` was used only when the value was 1 or 2.
 
-# 1. General Data Cleaning Rules
+- 1 = Female
+- 2 = Male
 
-The following cleaning steps were applied before analysis:
+## Sad or Hopeless Feeling
+`SadOrHopeless` was used only when the value was 1 or 2.
 
-- Only the variables `WhatIsYourSex` and `SadOrHopeless` were selected.
-- Both variables were converted to numeric values where necessary.
-- Missing values were excluded from the final analysis.
-- Invalid values outside the required codes were excluded.
-- Cleaned data were saved as:
+- 1 = Yes, success
+- 2 = No, failure
 
-```text
-data/processed/yrbs_cleaned.csv
-```
+New binary variable:
 
----
+- `SadOrHopeless_binary = 1` if `SadOrHopeless == 1`
+- `SadOrHopeless_binary = 0` if `SadOrHopeless == 2`
 
-# 2. Group Variable Recoding
+## Current Alcohol Use
+`CurrentAlcoholUse` was used only when the value was 1 through 7.
 
-## Variable Name
-`WhatIsYourSex`
+Following the Cycle 3 rule for current alcohol use:
 
-## Original Coding Used
-- **Code 1** = Female
-- **Code 2** = Male
+- success / exposed group = codes 2-7
+- failure / comparison group = code 1
 
-## Final Group Variable Created
-`Sex`
+New binary variable:
 
-## Final Coding Meaning
-- **Female** = students coded as 1 in `WhatIsYourSex`
-- **Male** = students coded as 2 in `WhatIsYourSex`
+- `CurrentAlcoholUse_binary = 1` if `CurrentAlcoholUse` is 2-7
+- `CurrentAlcoholUse_binary = 0` if `CurrentAlcoholUse` is 1
 
-Rows with missing or invalid values for `WhatIsYourSex` were removed.
-
----
-
-# 3. Response Variable Recoding
-
-## Variable Name
-`SadOrHopeless`
-
-## Original Coding Used
-- **Code 1** = Yes, the student reported feeling sad or hopeless
-- **Code 2** = No, the student did not report feeling sad or hopeless
-
-## Binary Variable Created
-`SadOrHopeless_binary`
-
-## Binary Coding Meaning
-- **1** = success = Yes, reported feeling sad or hopeless
-- **0** = failure = No, did not report feeling sad or hopeless
-
-Rows with missing or invalid values for `SadOrHopeless` were removed.
-
----
-
-# 4. Final Recoded Data
-
-The final recoded dataset was saved as:
-
-```text
-data/processed/yrbs_recoded.csv
-```
-
-The final usable sample size after cleaning was **13833** students.
+Important: this does not change the raw data. It creates a documented analysis variable.

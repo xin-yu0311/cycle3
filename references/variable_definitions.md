@@ -1,97 +1,40 @@
 # Variable Definitions
 
-## Dataset
-- **Dataset Name:** YRBS_2007.csv
-- **Project Type:** Two-Sample Inference
+## WhatIsYourSex
+Group variable for the approved two-sample comparison.
 
----
+- Code 1 = Female
+- Code 2 = Male
 
-# 1. Research Question
+Rows with missing or invalid values were removed from the analysis.
 
-Is the proportion of students who felt sad or hopeless different between female and male students?
+## SadOrHopeless
+Response variable. This is a binary categorical variable.
 
----
+- Code 1 = Yes, the student reported feeling sad or hopeless
+- Code 2 = No, the student did not report feeling sad or hopeless
 
-# 2. Group Variable
+For analysis, a new variable `SadOrHopeless_binary` was created:
 
-## Variable Name
-`WhatIsYourSex`
+- 1 = Yes / success
+- 0 = No / failure
 
-## Variable Type
-Categorical group variable
+## CurrentAlcoholUse
+Supplementary factor added to make the analysis more informative. It is not the approved main group variable. It is used for stratified and adjusted analyses.
 
-## Purpose in This Project
-This variable defines the two independent groups being compared.
+Original codes:
 
-## Coding Used
-- **1** = Female
-- **2** = Male
+- 1 = 0 days
+- 2 = 1 or 2 days
+- 3 = 3 to 5 days
+- 4 = 6 to 9 days
+- 5 = 10 to 19 days
+- 6 = 20 to 29 days
+- 7 = all 30 days
 
-## Final Group Names
-- Female students
-- Male students
+For the supplementary analysis, a new variable `CurrentAlcoholUse_binary` was created:
 
----
+- 0 = no current alcohol use, original code 1
+- 1 = current alcohol use, original codes 2-7
 
-# 3. Response Variable
-
-## Variable Name
-`SadOrHopeless`
-
-## Variable Type
-Binary categorical response variable
-
-## Purpose in This Project
-This variable is used to measure whether a student reported feeling sad or hopeless.
-
-## Original Coding Used
-- **1** = Yes
-- **2** = No
-
-## Recoded Variable
-`SadOrHopeless_binary`
-
-## Binary Coding Meaning
-- **1** = success = Yes, reported feeling sad or hopeless
-- **0** = failure = No, did not report feeling sad or hopeless
-
----
-
-# 4. Statistical Method
-
-Because the response variable is binary and the project compares two groups, the appropriate method is a **two-proportion z-test**.
-
-The parameter of interest is:
-
-```text
-p_Female - p_Male
-```
-
-where:
-
-- `p_Female` = the population proportion of female students who reported feeling sad or hopeless
-- `p_Male` = the population proportion of male students who reported feeling sad or hopeless
-
----
-
-# 5. Hypotheses
-
-```text
-H0: p_Female - p_Male = 0
-H1: p_Female - p_Male != 0
-```
-
-Significance level:
-
-```text
-alpha = 0.05
-```
-
----
-
-# 6. Assumptions Considered
-
-- The two groups are independent because each student belongs to only one sex group.
-- The response variable is binary, so comparing proportions is appropriate.
-- The sample sizes are large enough for the normal approximation because both groups have large Yes and No counts.
-- The data come from an observational survey, so the result should be interpreted as an association, not a causal relationship.
+The original raw variable was not modified.
