@@ -1,62 +1,81 @@
-# Final Interpretation
+# Final Interpretation - Project Cycle 3
 
-Project Cycle 3 Final Summary
-=============================
+## Research Question
 
-Research Question
------------------
 Is the proportion of students who felt sad or hopeless different between female and male students?
 
-Variables
----------
-Group variable: WhatIsYourSex
-- 1 = Female
-- 2 = Male
+This is the approved Cycle 3 Question 3.
 
-Response variable: SadOrHopeless
-- Original code 1 = Yes
-- Original code 2 = No
+## Variables
 
-Recoded response variable: SadOrHopeless_binary
-- 1 = Yes / success
-- 0 = No / failure
+- Group variable: `WhatIsYourSex`
+  - Female vs Male
+- Response variable: `SadOrHopeless`
+  - 1 = Yes, felt sad or hopeless
+  - 0 = No, did not feel sad or hopeless
+- Supplementary variable: `CurrentAlcoholUse`
+  - 1 = Current alcohol use, original codes 2-7
+  - 0 = No current alcohol use, original code 1
 
-Method
-------
-Because the response variable is binary and the project compares two independent groups, a two-proportion z-test was used.
+The original raw dataset was not modified. Recoded variables were created as new analysis columns and saved in `data/processed/`.
 
-Hypotheses
-----------
-H0: p_Female - p_Male = 0
-H1: p_Female - p_Male != 0
-Alpha = 0.05
+## Main Method
 
-Descriptive Results
--------------------
-Female students: 2580 out of 6940 reported sad or hopeless feelings.
-Female sample proportion: 0.3718 (37.18%)
+Because the response variable is binary and the project compares two independent groups, the required main method is a two-proportion z-test. The project also reports a 95% confidence interval for the difference in proportions.
 
-Male students: 1567 out of 6893 reported sad or hopeless feelings.
-Male sample proportion: 0.2273 (22.73%)
+To make the analysis more informative, the project also includes effect-size measures:
 
-Estimated Difference
---------------------
-p_Female - p_Male = 0.1444
-This means the female proportion was about 14.44 percentage points higher than the male proportion.
+- risk difference;
+- relative risk;
+- odds ratio;
+- alcohol-stratified summaries;
+- Mantel-Haenszel adjusted odds ratio;
+- logistic regression adjusted for current alcohol use.
 
-Inferential Result
-------------------
-95% confidence interval for the difference: (0.1294, 0.1595)
-In percentage points: (12.94%, 15.95%)
+The chi-square test is not used as the main presentation method.
 
-Test statistic (z): 18.5374
-P-value: 1.032e-76
-Decision at alpha = 0.05: Reject H0
+## Main Result
 
-Interpretation
---------------
-At the 0.05 significance level, there is sufficient statistical evidence that the proportion of students who reported feeling sad or hopeless differs between female and male students in the YRBS 2007 dataset. Female students reported sad or hopeless feelings at a significantly higher proportion than male students.
+The complete-case sample for the main two-sample comparison included 13,833 students.
 
-Limitation
-----------
-This analysis is based on observational survey data. Therefore, the result shows an association between sex and sad or hopeless feelings, but it does not prove that sex causes differences in sad or hopeless feelings.
+Female students had a sad/hopeless proportion of 37.2%, while male students had a sad/hopeless proportion of 22.7%.
+
+The estimated difference was:
+
+**Female - Male = 14.4 percentage points**
+
+The 95% confidence interval for the difference was:
+
+**[12.9, 15.9] percentage points**
+
+The two-proportion z-test gave:
+
+- z statistic = 18.54
+- p-value < 0.001
+
+At alpha = 0.05, we reject the null hypothesis. The data provide strong evidence that the proportion of students reporting sad or hopeless feelings differs between female and male students.
+
+## Alcohol-Use Extension
+
+Current alcohol use was added as a supplementary factor, not as a replacement for the approved two-sample research question. The extension complete-case sample included 12,601 students.
+
+In the logistic regression model adjusted for current alcohol use:
+
+- Female vs Male adjusted odds ratio = 2.13
+- Current alcohol use vs no current alcohol use adjusted odds ratio = 1.90
+
+This means the female-male difference remains visible after accounting for current alcohol use.
+
+## Type I and Type II Error Discussion
+
+A Type I error would occur if we conclude that female and male students differ in sad/hopeless feelings when there is actually no true population difference.
+
+A Type II error would occur if we fail to detect a real female-male difference that actually exists in the population.
+
+Because the sample size is large, the test has strong ability to detect differences. However, a large sample can also make small effects statistically significant, so this project reports the size of the difference and effect estimates, not only the p-value.
+
+## Final Conclusion
+
+In this YRBS 2007 dataset, female students reported sad or hopeless feelings more often than male students. The estimated difference was about 14.4 percentage points, and the 95% confidence interval did not include 0. Supplementary analysis showed that the pattern remained visible even after adding current alcohol use.
+
+Because this is observational survey data, the result should be interpreted as an association, not causation.
